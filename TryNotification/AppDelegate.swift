@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        registerForRichNotifications()
         return true
+    }
+    
+    func registerForRichNotifications(){
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound
+        ]) { (granted:Bool, error: Error?) in
+            if error != nil {
+                print(error?.localizedDescription)
+            }
+            if granted {
+                print("Permission granted")
+            } else {
+                print("Permission not granted")
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -89,5 +105,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+}
+extension AppDelegate: UNUserNotificationCenterDelegate{
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print(response.notification.request.content.userInfo)
+        completionHandler()
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
+    }
 }
 

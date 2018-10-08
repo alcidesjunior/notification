@@ -15,6 +15,7 @@
 		1AF34833216B821100497525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF34831216B821100497525 /* LaunchScreen.storyboard */; };
 		1AF3483E216B821100497525 /* TryNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3483D216B821100497525 /* TryNotificationTests.swift */; };
 		1AF34849216B821100497525 /* TryNotificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF34848216B821100497525 /* TryNotificationUITests.swift */; };
+		1AF34857216B892700497525 /* colaiuta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF34856216B892700497525 /* colaiuta.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1AF34844216B821100497525 /* TryNotificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryNotificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF34848216B821100497525 /* TryNotificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryNotificationUITests.swift; sourceTree = "<group>"; };
 		1AF3484A216B821100497525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AF34856216B892700497525 /* colaiuta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = colaiuta.jpg; path = ../../../Downloads/colaiuta.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				1AF3482F216B821100497525 /* Assets.xcassets */,
 				1AF34831216B821100497525 /* LaunchScreen.storyboard */,
 				1AF34834216B821100497525 /* Info.plist */,
+				1AF34856216B892700497525 /* colaiuta.jpg */,
 				1AF3482C216B821000497525 /* TryNotification.xcdatamodeld */,
 			);
 			path = TryNotification;
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AF34857216B892700497525 /* colaiuta.jpg in Resources */,
 				1AF34833216B821100497525 /* LaunchScreen.storyboard in Resources */,
 				1AF34830216B821100497525 /* Assets.xcassets in Resources */,
 				1AF3482B216B821000497525 /* Main.storyboard in Resources */,
